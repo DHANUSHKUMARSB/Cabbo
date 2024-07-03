@@ -41,10 +41,10 @@ const Navbar = () => {
         <img src={image2} alt="Image 2" className="h-[385px] w-[315px] ml-4 mt-0" /> {/* Adjust height, width, and margin-left */}
       </div>
       <div>
-        <img src={highway} alt="Highway" className="absolute bottom-0 ml-[415px] w-[566px] mb-[50px] h-[290px]" /> 
+        <img src={highway} alt="Highway" className="absolute bottom-0 ml-[445px] w-[569px] mb-[50px] h-[290px]" /> 
       </div> 
       <div>
-        <img src={image3} alt="image3" className="absolute top-[335px] left-0 h-[240px] w-[1330px]" />
+        <img src={image3} alt="image3" className="absolute top-[335px] left-0 h-[250px] w-[1330px]" />
       </div>
       <div>
         <img src={image4} alt="image4" className="absolute w-[150px] h-[170px] top-0 right-[390px] mt-[200px]" />
