@@ -1,53 +1,29 @@
-import { useState } from "react";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Nav from './components/Nav';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Safety from './pages/Safety';
+import Careers from './pages/Careers';
+import Community from './pages/Community';
+import ContactUs from './pages/ContactUs';
 
 function App() {
-  // start code here
   return (
-    <div className="hero">
-      <Nav />
-    </div>
-  );
-}
-function Menu({ isOpen }) {
-  const menu = [
-    "Home",
-    "About Us",
-    "Safety",
-    "Careers",
-    "Community",
-    "Contact Us",
-  ];
-
-  return (
-    <div className={`menu-content ${isOpen ? "active" : ""}`}>
-      {menu.map((data, index) => (
-        <span className="menu-item" key={index}>
-          {data}
-        </span>
-      ))}
-    </div>
-  );
-}
-function Nav() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  return (
-    <div className="nav">
-      <img className="logo" src="Images/Logo.png" alt="logo" />
-      <div className="menu">
-        <img
-          className="ham"
-          src="Images/Menu.png"
-          alt="ham"
-          onClick={toggleMenu}
-        />
-        <Menu isOpen={isOpen} />
+    <BrowserRouter>
+      <div className="hero">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/safety" element={<Safety />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
+
 export default App;

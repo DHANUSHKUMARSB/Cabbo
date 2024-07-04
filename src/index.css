@@ -48,6 +48,7 @@ code {
   color: white;
   font-size: 20px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .menu-item:hover {
@@ -73,6 +74,6 @@ code {
   }
 
   .ham {
-    display: block; /* Show hamburger menu icon */
+    display: block;
   }
 }
