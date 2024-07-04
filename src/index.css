@@ -1,4 +1,78 @@
-/* src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3a077d;
+  height: 80px;
+  padding: 0 10vw;
+}
+
+.logo {
+  width: 85px;
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.ham {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+
+.menu-content {
+  display: flex;
+  justify-content: space-evenly;
+  width: auto;
+  gap: 2vw;
+}
+
+.menu-item {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  color: #b8e010;
+}
+
+@media (max-width: 1028px) {
+  .menu-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #3a077d;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .menu-content.active {
+    display: flex;
+    padding-bottom: 5vw;
+  }
+
+  .ham {
+    display: block; /* Show hamburger menu icon */
+  }
+}
